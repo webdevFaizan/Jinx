@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/layout.css">  
+    <!-- This external reference of the css file is different than the traditional css file. In the .docx file I have added a stack overflow explaination  -->
+    <!-- Also this single css file will be helpful in defining the common layouts all the webpages, since layout.ejs is the common html file. But if we want to add the  -->
+    <!-- Styles to specific ejs files, then we will have to add it in those separate files itself. -->
+    <%-style%>      
+    <!-- This style is a variable and it will add the value from the style tag that would be added from different files -->
+</head>
+<body>
+    <%-include('_header')%>     
+    <!-- Coming from express middle ware in main index.js file , we will first include this header file. This is a common file that will be present in all the webpages.-->
+    <%-body%>
+    <!-- This is a variable name called body, it will be replaced with the different files in the controller folder that will render the view. -->
+    <!-- In the controllers folder, home_controller.js will call home.ejs to render but instead the middle ware will call this file, with body variable -->
+    <!-- being replaced by home.ejs content. Same is the case when some route try to call the user_controller.js file, layout.ejs will be rendered -->
+    <!-- while replacing the variable 'body' with user_profile.ejs -->
+    <%-include('_footer')%>
+    <%-script%>
+</body>
+</html>

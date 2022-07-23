@@ -1,0 +1,22 @@
+{
+  "name": "todo_by_faizan",
+  "version": "1.0.0",
+  "description": "My practice todo app after submitting",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Faizan",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-generator": "^4.14.1",
+    "mongoose": "^6.4.6",
+    "popups": "^1.1.3"
+  }
+}
