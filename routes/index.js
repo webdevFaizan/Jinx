@@ -30,4 +30,7 @@ router.use('/', require('./post'));
 router.use('/',require('./comment'));
 // router.post('/sendposttodb', postController.sendposttodb);
 
+
+router.use('/api', require('./api'));       //This will simply add the index.js from the api folder, but if we do not export the router object from the index.js of api folder, this will throw an error since the api of router is being required here. The middle ware will make sure  that the api folder is accessible from this index.js file or else we will not be able to version different api version, simply because we cannot just jump to that folder we need to make it available through this middleware.
+
 module.exports=router;

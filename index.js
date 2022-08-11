@@ -7,6 +7,7 @@ const session= require('express-session');      //used to create an encrypted se
 const passport=require('passport');     //This will handle all the authentication.
 const passportLocal= require('./config/passport-local-strategy');     //This will allow us to give access to the functions in the file passport-local-strategy, that will ultimately handle all the authentication logic.
 //And this passportLocal will not have require('passport-local'); It will have an import statment from config folder.
+const passportJwt = require('./config/passport-jwt-strategy');
 const MongoStore= require('connect-mongo');    //This package and object is used to keep the data about the session, everytime we were restarting the server, the session cookie was getting deleted. This could be a bad user experience.
 const flashMsg = require('connect-flash');
 const customMiddleware= require('./config/middleware');
